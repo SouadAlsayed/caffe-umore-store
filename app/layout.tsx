@@ -1,4 +1,19 @@
 import "./globals.css";
+import { Inter } from "next/font/google";
+
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+});
+
+export const metadata = {
+  title: {
+    template: "%s / Caffè Umore Store",
+    default: "Caffè Umore Store",
+  },
+  description:
+    "Discover premium coffee made from the finest beans and roasted to perfection. Shop your favorite flavors with a clean, effortless shopping experience.",
+};
 
 export default function RootLayout({
   children,
@@ -7,7 +22,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-coffee-900 text-9xl">{children}</body>
+      <body
+        className={`${inter.className} bg-coffee-100 text-coffee-900 min-h-screen`}
+      >
+        {children}
+      </body>
     </html>
   );
 }

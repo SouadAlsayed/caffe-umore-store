@@ -1,1 +1,56 @@
 @import "tailwindcss";
+
+@theme {
+  /* Coffee colors */
+  --color-coffee-900: #2a1d18;
+  --color-coffee-800: #3c2a23;
+  --color-coffee-700: #4f3a2f;
+  --color-coffee-600: #8b5e3c;
+  --color-coffee-300: #d9c2a3;
+  --color-coffee-200: #e7d8c2;
+  --color-coffee-100: #f6efe7;
+  --color-coffee-50: #fbf8f4;
+
+  /* Olive colors */
+  --color-olive: #5e6b50;
+  --color-olive-dark: #6d7860;
+
+  /* Status colors */
+  --color-error-bg: #fdecec;
+  --color-error-border: #f4c7c7;
+  --color-error-text: #c62828;
+
+  --color-warning-bg: #fff7e5;
+  --color-warning-border: #f7e3b2;
+  --color-warning-text: #a66a00;
+
+  --color-info-bg: #e9f7ff;
+  --color-info-border: #c8e7f7;
+  --color-info-text: #0a6aa6;
+
+  --color-success-bg: #ecf9ec;
+  --color-success-border: #cdeccd;
+  --color-success-text: #2e7d32;
+
+  /* Buttons */
+  --color-button-primary: #8b5e3c;
+  --color-button-primary-hover: #714a30;
+  --color-button-primary-disabled: #a1866f;
+  --color-button-secondary: #d9c2a3;
+  --color-button-secondary-hover: #c8b193;
+  --color-button-secondary-disabled: #a38e7c;
+  --color-button-accent: #5e6b50;
+  --color-button-accent-hover: #4c5741;
+  --color-button-accent-disabled: #c8d0c1;
+
+  /* Gray shades */
+  --color-gray-900: #2a2523;
+  --color-gray-800: #3a3432;
+  --color-gray-700: #4a4441;
+  --color-gray-600: #6b635f;
+  --color-gray-500: #8c837f;
+  --color-gray-400: #b4ada9;
+  --color-gray-300: #d3cdc9;
+  --color-gray-200: #e9e6e3;
+  --color-gray-100: #f5f3f1;
+}
