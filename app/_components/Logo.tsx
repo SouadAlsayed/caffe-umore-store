@@ -1,0 +1,30 @@
+import Image from "next/image";
+import Link from "next/link";
+import { Bodoni_Moda } from "next/font/google";
+import logo from "@/public/logo.png";
+
+const bodoniModa = Bodoni_Moda({
+  subsets: ["latin"],
+  display: "swap",
+});
+
+function Logo() {
+  return (
+    <Link href="/" className="flex items-center justify-center gap-4 ">
+      <Image
+        src={logo}
+        quality={100}
+        height="40"
+        width="40"
+        alt="Caffè Umore Logo"
+      />
+      <span
+        className={`${bodoniModa.className} text-lg font-bold text-coffee-900`}
+      >
+        Caffè Umore Store
+      </span>
+    </Link>
+  );
+}
+
+export default Logo;
