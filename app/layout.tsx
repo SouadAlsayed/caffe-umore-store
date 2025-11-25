@@ -27,6 +27,7 @@ export default function RootLayout({
         className={`${inter.className} antialiased bg-coffee-100 text-coffee-900 min-h-screen relative max-w-7xl w-full mx-auto`}
       >
         <Header />
+
         <main className="w-[90%] max-w-7xl mx-auto">{children}</main>
       </body>
     </html>

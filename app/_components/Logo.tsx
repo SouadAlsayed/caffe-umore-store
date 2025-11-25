@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Bodoni_Moda } from "next/font/google";
-import logo from "@/public/logo.png";
+import logo from "@/public/logo.webp";
 
 const bodoniModa = Bodoni_Moda({
   subsets: ["latin"],
@@ -19,9 +19,9 @@ function Logo() {
         alt="Caffè Umore Logo"
       />
       <span
-        className={`${bodoniModa.className} text-lg font-bold text-coffee-900`}
+        className={`${bodoniModa.className} text-xl font-bold text-coffee-900`}
       >
-        Caffè Umore Store
+        Caffè Umore
       </span>
     </Link>
   );

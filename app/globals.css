@@ -54,3 +54,6 @@
   --color-gray-200: #e9e6e3;
   --color-gray-100: #f5f3f1;
 }
+button {
+  cursor: pointer;
+}
