@@ -1,7 +1,6 @@
 import { Product } from "@/types/Product";
 import { Heart, ShoppingCart } from "lucide-react";
 import Image from "next/image";
-import IconCircle from "./IconCircle";
 
 interface CardProps {
   product: Product;
