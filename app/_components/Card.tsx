@@ -15,7 +15,7 @@ function Card({ product }: CardProps) {
         <Heart
           size={20}
           className="font-bold stroke-current fill-transparent 
-      group-hover:fill-error-text group-hover:stroke-error-text 
+      group-hover:fill-color-red group-hover:stroke-color-red 
       transition-colors duration-200"
         />
       </button>

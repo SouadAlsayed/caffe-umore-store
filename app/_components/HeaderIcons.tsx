@@ -17,7 +17,7 @@ function HeaderIcons({ mobile = false, onLinkClick }: HeaderIconsProps) {
           onClick={onLinkClick}
         >
           <IconCircle>
-            <User className="w-5 h-5" />
+            <User size={24} />
           </IconCircle>
           <span className="font-medium">Profile</span>
         </Link>
@@ -28,7 +28,7 @@ function HeaderIcons({ mobile = false, onLinkClick }: HeaderIconsProps) {
           onClick={onLinkClick}
         >
           <IconCircle>
-            <Heart className="w-5 h-5 hover:text-error-text" />
+            <Heart size={24} className=" hover:text-color-red" />
           </IconCircle>
           <span className="font-medium">Wishlist</span>
         </Link>
@@ -39,7 +39,7 @@ function HeaderIcons({ mobile = false, onLinkClick }: HeaderIconsProps) {
           onClick={onLinkClick}
         >
           <IconCircle>
-            <ShoppingBag className="w-5 h-5" />
+            <ShoppingBag size={24} />
           </IconCircle>
           <span className="font-medium">Cart</span>
         </Link>
