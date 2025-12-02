@@ -35,8 +35,7 @@ function Card({ product }: CardProps) {
       {/* Content */}
       <div className="flex flex-col justify-between items-center text-center gap-2 px-2">
         <h3 className="font-semibold text-lg ">{name}</h3>
-
-        <div className="w-full flex justify-around items-center ">
+        <div className="mt-auto w-full flex justify-around items-center ">
           <p className="font-semibold text-gray-800">120.00 LE</p>
           <p className="border border-gray-600 rounded-2xl px-3 py-1 text-sm text-gray-600">
             250g
