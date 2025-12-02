@@ -24,10 +24,10 @@ function Header() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 w-full py-4 px-12 border-b border-coffee-300 z-20 transition-all duration-300 ${
-          scrolled
+        className={`fixed top-0 left-0 w-full py-4 px-12 border-b  border-coffee-300 z-20 transition-all duration-300 ${
+          scrolled && !isMenuOpen
             ? "bg-coffee-50/50 backdrop-blur-lg"
-            : "md:bg-transparent backdrop-blur-0"
+            : "bg-coffee-50 md:bg-transparent backdrop-blur-0"
         }`}
       >
         <div className="flex justify-between items-center">

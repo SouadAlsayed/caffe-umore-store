@@ -7,7 +7,7 @@ function HeroSection() {
     <section className="flex gap-36 xl:gap-48 relative right-1/2 left-1/2 -ml-[50vw] -mr-[50vw] w-screen h-screen overflow-hidden shadow-lg">
       {/* Left Content Section */}
       <div className="flex-1 flex items-center justify-center px-8 pt-[73px] text-center sm:text-start">
-        <div className="w-full max-w-[520px] flex justify-center flex-col gap-10 leading-[1.1]">
+        <div className="w-full max-w-[520px] flex justify-center flex-col gap-5 sm:gap-10 leading-[1.1]">
           <h1 className="font-bold text-4xl sm:text-6xl">
             The best coffee bean for your every cup of your coffee
           </h1>

@@ -4,6 +4,8 @@ import HeroSection from "./_components/HeroSection";
 import Section from "./_components/Section";
 import CategoryCards from "./_components/CategoryCards";
 import { Bodoni_Moda } from "next/font/google";
+import SectionHeading from "./_components/SectionHeading";
+import SectionP from "./_components/SectionP";
 
 const bodoniModa = Bodoni_Moda({
   subsets: ["latin"],
@@ -16,29 +18,25 @@ export default function Page() {
       <HeroSection />
 
       {/* Category Section */}
-      <section className="my-32 flex flex-col items-center relative right-1/2 left-1/2 -ml-[50vw] -mr-[50vw] w-screen h-screen overflow-hidden ">
-        <h2 className={`${bodoniModa.className} font-bold text-4xl py-6`}>
-          Our Coffee Categories
-        </h2>
+      <Section fullScreen>
+        <SectionHeading heading="Our Coffee Categories" />
 
-        <p className="text-gray-600 text-center mb-12">
-          A seamless introduction to our coffee categories, each offering a
-          distinct experience
-        </p>
+        <SectionP
+          p=" A seamless introduction to our coffee categories, each offering a
+          distinct experience"
+        />
 
         <CategoryCards fontFamily={bodoniModa.className} />
-      </section>
+      </Section>
 
       {/* Shop Section */}
       <Section>
-        <h2 className={`${bodoniModa.className} font-bold text-4xl py-6`}>
-          Our Coffee Selection
-        </h2>
+        <SectionHeading heading="Our Coffee Selection" />
 
-        <p className="text-gray-600 text-center mb-12">
-          Browse our full selection of freshly roasted coffee in all flavors and
-          roast levels
-        </p>
+        <SectionP
+          p=" Browse our full selection of freshly roasted coffee in all flavors and
+          roast levels"
+        />
 
         <Cards />
 
