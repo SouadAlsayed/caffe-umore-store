@@ -1,3 +1,4 @@
+import Footer from "./_components/Footer";
 import Header from "./_components/Header";
 import "./globals.css";
 import { Inter } from "next/font/google";
@@ -24,11 +25,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} antialiased bg-coffee-50 text-coffee-900 min-h-screen relative max-w-7xl w-full mx-auto overflow-x-hidden`}
+        className={`${inter.className} antialiased bg-coffee-50 text-coffee-900 min-h-screen overflow-x-hidden`}
       >
         <Header />
 
-        <main className="w-[90%] max-w-7xl mx-auto">{children}</main>
+        <div className="max-w-7xl w-full mx-auto">
+          <main className="w-[90%] max-w-7xl mx-auto">{children}</main>
+        </div>
+
+        <Footer />
       </body>
     </html>
   );

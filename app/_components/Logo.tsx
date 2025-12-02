@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Bodoni_Moda } from "next/font/google";
 import logo from "@/public/logo.webp";
+import { Bodoni_Moda } from "next/font/google";
 
 const bodoniModa = Bodoni_Moda({
   subsets: ["latin"],
