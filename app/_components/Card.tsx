@@ -1,7 +1,6 @@
 import { Product } from "@/types/Product";
 import { Heart, ShoppingCart } from "lucide-react";
 import Image from "next/image";
-import IconCircle from "./IconCircle";
 
 interface CardProps {
   product: Product;
@@ -11,7 +10,7 @@ function Card({ product }: CardProps) {
   const { name, image_url: image } = product;
 
   return (
-    <div className="w-full max-w-[300px] mx-auto bg-white rounded-2xl py-6 px-10 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 relative">
+    <div className="w-full max-w-[300px] mx-auto bg-white rounded-2xl py-6 px-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 relative">
       {/* Image */}
       <div className="relative w-full h-70 md:h-90 rounded-xl overflow-hidden mb-4">
         <Image
@@ -32,18 +31,18 @@ function Card({ product }: CardProps) {
 
           {/* Favourite */}
           <button className="group">
-            <IconCircle>
+            <div className="p-1.5 rounded-lg border border-gray-300 bg-gray-50">
               <Heart
                 size={20}
                 className="font-bold stroke-current fill-transparent 
-              group-hover:fill-color-red group-hover:stroke-color-red 
-              transition-colors duration-200"
+                group-hover:fill-color-red group-hover:stroke-color-red 
+                transition-colors duration-200"
               />
-            </IconCircle>
+            </div>
           </button>
         </div>
 
-        <button className="w-full flex items-center justify-center gap-2 bg-button-accent hover:bg-button-accent-hover rounded-xl text-white px-4 py-2 transition">
+        <button className="w-full flex items-center justify-center gap-2 bg-button-accent hover:bg-button-accent-hover rounded-lg text-white px-4 py-2 transition">
           <ShoppingCart size={20} />
           Buy Now
         </button>

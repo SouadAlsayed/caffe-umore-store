@@ -8,6 +8,7 @@ import SectionHeading from "./_components/SectionHeading";
 import SectionP from "./_components/SectionP";
 import Image from "next/image";
 import QualityCards from "./_components/QualityCards";
+import Link from "next/link";
 
 const bodoniModa = Bodoni_Moda({
   subsets: ["latin"],
@@ -42,10 +43,12 @@ export default function Page() {
 
         <Cards />
 
-        <button className="mt-12 flex items-center justify-between gap-4 px-12 py-3 rounded-3xl text-button-primary border-button-primary border-2 sm:text-lg font-medium hover:bg-coffee-200 transition-all duration-300 hover:scale-105">
-          View All Products
-          <MoveRight size={20} />
-        </button>
+        <Link href="/shop">
+          <button className="mt-12 flex items-center justify-between gap-4 px-12 py-3 rounded-3xl text-button-primary border-button-primary border-2 sm:text-lg font-medium hover:bg-coffee-200 transition-all duration-300 hover:scale-105">
+            View All Products
+            <MoveRight size={20} />
+          </button>
+        </Link>
       </Section>
 
       {/* Quality Section */}
