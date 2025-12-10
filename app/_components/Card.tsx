@@ -7,7 +7,14 @@ interface CardProps {
 }
 
 function Card({ product }: CardProps) {
-  const { name, image_url: image } = product;
+  const {
+    name,
+    image_url: image,
+    description,
+    product_variants: variants,
+  } = product;
+
+  const [{ price }] = variants;
 
   return (
     <div className="w-full max-w-[300px] mx-auto bg-white rounded-2xl py-6 px-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 relative">
@@ -25,16 +32,18 @@ function Card({ product }: CardProps) {
       {/* Content */}
       <div className="flex flex-col justify-between items-center text-center gap-2 px-2">
         <h3 className="font-semibold text-lg ">{name}</h3>
-
-        <div className="mt-auto w-full flex justify-around items-center ">
-          <p className="font-semibold text-gray-800">120.00 LE</p>
+        <p className="text-sm text-gray-600">
+          {description.split(" ").slice(0, 7).join(" ") + "..."}
+        </p>
+        <div className="mt-auto w-full flex justify-around items-center gap-2">
+          <p className="font-semibold text-coffee-800">{price}.00 LE</p>
 
           {/* Favourite */}
           <button className="group">
             <div className="p-1.5 rounded-lg border border-gray-300 bg-gray-50">
               <Heart
                 size={20}
-                className="font-bold stroke-current fill-transparent 
+                className="font-bold stroke-current fill-transparent text-coffee-600
                 group-hover:fill-color-red group-hover:stroke-color-red 
                 transition-colors duration-200"
               />
@@ -42,9 +51,8 @@ function Card({ product }: CardProps) {
           </button>
         </div>
 
-        <button className="w-full flex items-center justify-center gap-2 bg-button-accent hover:bg-button-accent-hover rounded-lg text-white px-4 py-2 transition">
-          <ShoppingCart size={20} />
-          Buy Now
+        <button className="w-full flex items-center justify-center bg-button-primary hover:bg-button-primary-hover rounded-lg text-white py-2 transition">
+          Select Options
         </button>
       </div>
     </div>

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import SideFilterBar from "../_components/SideFilterBar";
-import { getProducts } from "../_lib/data-service";
+import { getProductsByCategory } from "../_lib/data-service";
 import Card from "../_components/Card";
 
 import { Bodoni_Moda } from "next/font/google";
@@ -12,8 +12,7 @@ const bodoniModa = Bodoni_Moda({
 });
 
 export default async function Page() {
-  const products = await getProducts();
-  const regularProducts = products.filter((p) => p.category == "regular");
+  const regularProducts = await getProductsByCategory("regular");
 
   return (
     <>
