@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { SlidersHorizontal, X } from "lucide-react";
-import { useState } from "react";
+import { SlidersHorizontal, X } from 'lucide-react';
+import { useState } from 'react';
 
 function SideFilterBar({ children }: { children: React.ReactNode }) {
   const [filterOpen, setFilterOpen] = useState(false);
@@ -9,7 +9,7 @@ function SideFilterBar({ children }: { children: React.ReactNode }) {
   return (
     <aside>
       {/* Desktop Filter */}
-      <div className="space-y-6 hidden md:block w-48">
+      <div className="hidden w-48 space-y-6 md:block">
         <h3 className="text-lg font-bold">Filter By</h3>
         {children}
       </div>
@@ -17,14 +17,14 @@ function SideFilterBar({ children }: { children: React.ReactNode }) {
       {/* Mobile */}
       <button
         onClick={() => setFilterOpen(!filterOpen)}
-        className="md:hidden text-lg font-bold flex justify-between items-center gap-2 border border-gray-300 rounded-lg px-4 py-2 bg-white"
+        className="flex items-center justify-between gap-2 rounded-lg border border-gray-300 bg-white px-4 py-2 text-lg font-bold md:hidden"
       >
         {filterOpen ? <X size={20} /> : <SlidersHorizontal size={20} />}
         Fitler By
       </button>
 
       {filterOpen && (
-        <div className="md:hidden space-y-6 w-full flex justify-around py-8 border-b border-gray-200">
+        <div className="flex w-full justify-around space-y-6 border-b border-gray-200 py-8 md:hidden">
           {children}
         </div>
       )}

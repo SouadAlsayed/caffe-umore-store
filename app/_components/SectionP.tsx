@@ -1,5 +1,5 @@
 function SectionP({ p }: { p: string }) {
-  return <p className="text-gray-600 text-center mb-12">{p}</p>;
+  return <p className="mb-12 text-center text-gray-600">{p}</p>;
 }
 
 export default SectionP;

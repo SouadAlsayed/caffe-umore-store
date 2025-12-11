@@ -8,8 +8,8 @@ function Section({ children, fullScreen = false }: SectionProps) {
     <section
       className={
         fullScreen
-          ? "my-32 flex flex-col items-center relative right-1/2 left-1/2 -ml-[50vw] -mr-[50vw] w-screen h-screen overflow-hidden "
-          : "my-32 flex flex-col items-center "
+          ? 'relative right-1/2 left-1/2 my-32 -mr-[50vw] -ml-[50vw] flex h-screen w-screen flex-col items-center overflow-hidden'
+          : 'my-32 flex flex-col items-center'
       }
     >
       {children}

@@ -1,6 +1,6 @@
-import { Heart, ShoppingBag, User } from "lucide-react";
-import Link from "next/link";
-import IconCircle from "./IconCircle";
+import { Heart, ShoppingBag, User } from 'lucide-react';
+import Link from 'next/link';
+import IconCircle from './IconCircle';
 
 interface HeaderIconsProps {
   mobile?: boolean;
@@ -13,7 +13,7 @@ function HeaderIcons({ mobile = false, onLinkClick }: HeaderIconsProps) {
       <div className="space-y-4">
         <Link
           href="/profile"
-          className="flex items-center gap-4 p-3 rounded-lg hover:bg-coffee-100 transition-colors"
+          className="hover:bg-coffee-100 flex items-center gap-4 rounded-lg p-3 transition-colors"
           onClick={onLinkClick}
         >
           <IconCircle>
@@ -24,18 +24,18 @@ function HeaderIcons({ mobile = false, onLinkClick }: HeaderIconsProps) {
 
         <Link
           href="/wishlist"
-          className="flex items-center gap-4 p-3 rounded-lg  hover:bg-coffee-100 transition-colors"
+          className="hover:bg-coffee-100 flex items-center gap-4 rounded-lg p-3 transition-colors"
           onClick={onLinkClick}
         >
           <IconCircle>
-            <Heart size={24} className=" hover:text-color-red" />
+            <Heart size={24} className="hover:text-color-red" />
           </IconCircle>
           <span className="font-medium">Wishlist</span>
         </Link>
 
         <Link
           href="/cart"
-          className="flex items-center gap-4 p-3 rounded-lg hover:bg-coffee-100 transition-colors"
+          className="hover:bg-coffee-100 flex items-center gap-4 rounded-lg p-3 transition-colors"
           onClick={onLinkClick}
         >
           <IconCircle>
@@ -48,11 +48,11 @@ function HeaderIcons({ mobile = false, onLinkClick }: HeaderIconsProps) {
   }
 
   return (
-    <ul className="flex justify-between items-center gap-5">
+    <ul className="flex items-center justify-between gap-5">
       <li>
         <Link href="/profile">
           <IconCircle>
-            <User className="w-5 h-5" />
+            <User className="h-5 w-5" />
           </IconCircle>
         </Link>
       </li>
@@ -60,7 +60,7 @@ function HeaderIcons({ mobile = false, onLinkClick }: HeaderIconsProps) {
       <li>
         <Link href="/wishlist">
           <IconCircle>
-            <Heart className="w-5 h-5 hover:text-error-text" />
+            <Heart className="hover:text-error-text h-5 w-5" />
           </IconCircle>
         </Link>
       </li>
@@ -68,7 +68,7 @@ function HeaderIcons({ mobile = false, onLinkClick }: HeaderIconsProps) {
       <li>
         <Link href="/cart">
           <IconCircle>
-            <ShoppingBag className="w-5 h-5" />
+            <ShoppingBag className="h-5 w-5" />
           </IconCircle>
         </Link>
       </li>

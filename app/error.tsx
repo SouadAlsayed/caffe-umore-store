@@ -1,6 +1,6 @@
-"use client";
-import Section from "./_components/Section";
-import SectionHeading from "./_components/SectionHeading";
+'use client';
+import Section from './_components/Section';
+import SectionHeading from './_components/SectionHeading';
 interface ErrorProps {
   error: Error & { digest?: string };
   reset: () => void;
@@ -8,15 +8,13 @@ interface ErrorProps {
 
 export default function Error({ error, reset }: ErrorProps) {
   return (
-    <main className="h-screen flex justify-center items-center">
+    <main className="flex h-screen items-center justify-center">
       <Section>
         <SectionHeading heading="Something went wrong!" />
-        <p className="text-gray-600 text-center mb-12 md:px-40">
-          {error.message}
-        </p>
+        <p className="mb-12 text-center text-gray-600 md:px-40">{error.message}</p>
 
         <button
-          className="w-fit flex items-center justify-between px-12 py-3 rounded-3xl text-white sm:text-lg font-medium bg-button-accent hover:bg-button-accent-hover transition-all duration-300 hover:scale-105"
+          className="bg-button-accent hover:bg-button-accent-hover flex w-fit items-center justify-between rounded-3xl px-12 py-3 font-medium text-white transition-all duration-300 hover:scale-105 sm:text-lg"
           onClick={reset}
         >
           Try again

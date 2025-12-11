@@ -1,8 +1,8 @@
-import Spinner from "./_components/Spinner";
+import Spinner from './_components/Spinner';
 
 function Loading() {
   return (
-    <main className="h-screen flex justify-center items-center">
+    <main className="flex h-screen items-center justify-center">
       <Spinner />
     </main>
   );

@@ -4,7 +4,7 @@ function IconCircle({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="w-8 h-8 bg-coffee-200 hover:bg-coffee-300 transition-colors p-1 rounded-full flex justify-center items-center">
+    <div className="bg-coffee-200 hover:bg-coffee-300 flex h-8 w-8 items-center justify-center rounded-full p-1 transition-colors">
       {children}
     </div>
   );
