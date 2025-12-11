@@ -29,7 +29,7 @@ export default function Page() {
           distinct experience"
         />
 
-        <CategoryCards fontFamily={bodoniModa.className} />
+        <CategoryCards />
       </Section>
 
       {/* Shop Section */}

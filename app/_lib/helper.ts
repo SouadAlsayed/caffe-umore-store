@@ -1,5 +1,13 @@
 import { Product } from '@/types/Product';
 
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import clsx from 'clsx';
+import { twMerge } from 'tailwind-merge';
+
+export function cn(...input: any[]) {
+  return twMerge(clsx(input));
+}
+
 export function formatPrice(value: number): string {
   if (isNaN(value)) return '—';
 

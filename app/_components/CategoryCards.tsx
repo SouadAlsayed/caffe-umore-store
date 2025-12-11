@@ -1,5 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { Bodoni_Moda } from 'next/font/google';
+
+const bodoniModa = Bodoni_Moda({
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 const categories = [
   { name: 'Regular', image: '/c1.jpg' },
@@ -12,10 +18,10 @@ const categories = [
   { name: 'Fruit', image: '/c8.jpg' },
 ];
 
-function CategoryCards({ fontFamily }: { fontFamily: string }) {
+function CategoryCards() {
   return (
     <div
-      className={`${fontFamily} grid h-full w-full grid-cols-2 gap-1 px-3 text-lg md:grid-cols-4`}
+      className={`${bodoniModa.className} grid h-full w-full grid-cols-2 gap-1 px-3 text-lg md:grid-cols-4`}
     >
       {categories.map((c) => (
         <div className="group relative cursor-pointer overflow-hidden rounded-xl" key={c.name}>
