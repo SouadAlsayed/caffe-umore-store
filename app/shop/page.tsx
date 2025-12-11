@@ -1,10 +1,8 @@
 import Link from "next/link";
-import SideFilterBar from "../_components/SideFilterBar";
-import { getProductsByCategory } from "../_lib/data-service";
-import Card from "../_components/Card";
+import { getProducts } from "../_lib/data-service";
 
 import { Bodoni_Moda } from "next/font/google";
-import SortSelection from "../_components/SortSelection";
+import ShopCollection from "../_components/ShopCollection";
 
 const bodoniModa = Bodoni_Moda({
   subsets: ["latin"],
@@ -12,7 +10,7 @@ const bodoniModa = Bodoni_Moda({
 });
 
 export default async function Page() {
-  const regularProducts = await getProductsByCategory("regular");
+  const products = await getProducts();
 
   return (
     <>
@@ -36,31 +34,7 @@ export default async function Page() {
       </div>
 
       {/* Shop */}
-      <div className="mb-32">
-        <div className="flex flex-col md:flex-row gap-8">
-          {/* Sidebar */}
-          <SideFilterBar />
-
-          {/* Products Grid */}
-          <div className="flex-1">
-            {/* Sort */}
-            <div className="flex flex-col md:flex-row justify-between items-end mb-6 gap-4">
-              <p className="text-gray-600">
-                Showing 1-3 of {regularProducts.length} results
-              </p>
-
-              <SortSelection />
-            </div>
-
-            {/* Products */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-              {regularProducts.map((p) => (
-                <Card product={p} key={p.id} />
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
+      <ShopCollection products={products} />
     </>
   );
 }

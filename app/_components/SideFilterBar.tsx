@@ -2,17 +2,16 @@
 
 import { SlidersHorizontal, X } from "lucide-react";
 import { useState } from "react";
-import FilterContent from "./FilterContent";
 
-function SideFilterBar() {
+function SideFilterBar({ children }: { children: React.ReactNode }) {
   const [filterOpen, setFilterOpen] = useState(false);
 
   return (
-    <aside className="">
+    <aside>
       {/* Desktop Filter */}
       <div className="space-y-6 hidden md:block w-48">
         <h3 className="text-lg font-bold">Filter By</h3>
-        <FilterContent />
+        {children}
       </div>
 
       {/* Mobile */}
@@ -26,7 +25,7 @@ function SideFilterBar() {
 
       {filterOpen && (
         <div className="md:hidden space-y-6 w-full flex justify-around py-8 border-b border-gray-200">
-          <FilterContent />
+          {children}
         </div>
       )}
     </aside>

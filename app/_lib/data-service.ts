@@ -1,7 +1,10 @@
 import { supabase } from "./supabase";
 
 export async function getProducts() {
-  const { data, error } = await supabase.from("products").select("*");
+  const { data, error } = await supabase.from("products").select(`
+    *,
+    product_variants (*)
+  `);
 
   if (error) throw new Error("Coffee products could not be loaded");
 

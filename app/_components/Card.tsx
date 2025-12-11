@@ -1,6 +1,7 @@
 import { Product } from "@/types/Product";
-import { Heart, ShoppingCart } from "lucide-react";
+import { Heart } from "lucide-react";
 import Image from "next/image";
+import { formatPrice } from "../_lib/helper";
 
 interface CardProps {
   product: Product;
@@ -36,16 +37,16 @@ function Card({ product }: CardProps) {
           {description.split(" ").slice(0, 7).join(" ") + "..."}
         </p>
         <div className="mt-auto w-full flex justify-around items-center gap-2">
-          <p className="font-semibold text-coffee-800">{price}.00 LE</p>
+          <p className="font-semibold text-coffee-800">
+            {formatPrice(price)}.00
+          </p>
 
           {/* Favourite */}
           <button className="group">
             <div className="p-1.5 rounded-lg border border-gray-300 bg-gray-50">
               <Heart
                 size={20}
-                className="font-bold stroke-current fill-transparent text-coffee-600
-                group-hover:fill-color-red group-hover:stroke-color-red 
-                transition-colors duration-200"
+                 className="font-bold stroke-current fill-transparent text-coffee-600 group-hover:fill-color-red group-hover:stroke-color-red transition-colors duration-200"
               />
             </div>
           </button>
